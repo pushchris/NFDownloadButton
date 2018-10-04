@@ -127,22 +127,6 @@ public class StyleKit: NSObject {
         context.restoreGState()
 
 
-        // Square Drawing
-        context.saveGState()
-        context.translateBy(x: 25, y: 25)
-
-        context.saveGState()
-        context.setAlpha(requestDownloadSquareAlpha)
-
-        let squarePath = UIBezierPath(rect: CGRect(x: -3.75, y: -3.75, width: 7.5, height: 7.5))
-        palette.downloadColor.setFill()
-        squarePath.fill()
-
-        context.restoreGState()
-
-        context.restoreGState()
-
-
         // RippleCircle Drawing
         context.saveGState()
         context.translateBy(x: 25, y: 25)
@@ -229,21 +213,6 @@ public class StyleKit: NSObject {
         palette.buttonBackgroundColor.setStroke()
         fullCenterPath.lineWidth = 0.5
         fullCenterPath.stroke()
-
-        context.restoreGState()
-
-
-        // Square Drawing
-        context.saveGState()
-
-        context.saveGState()
-        context.setAlpha(downloadedCircleOpacity)
-
-        let squarePath = UIBezierPath(rect: CGRect(x: -3.75, y: -3.75, width: 7.5, height: 7.5))
-        palette.downloadColor.setFill()
-        squarePath.fill()
-
-        context.restoreGState()
 
         context.restoreGState()
 
