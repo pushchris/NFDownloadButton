@@ -77,7 +77,6 @@ public class StyleKit: NSObject {
         let rippleDimensions: CGFloat = 31 + rippleManipulable * 15
         let rippleOrigin: CGFloat = -1 * rippleDimensions / 2.0
         let rippleAlpha: CGFloat = rippleManipulable < 0.5 ? rippleManipulable : 1 - rippleManipulable
-        let requestDownloadSquareAlpha: CGFloat = rippleManipulable
         let requestDownloadReveal: CGFloat = rippleManipulable * 34
 
         // Dashed Circle Drawing
@@ -216,6 +215,8 @@ public class StyleKit: NSObject {
 
         context.restoreGState()
 
+
+        // Square Drawing
 
         context.endTransparencyLayer()
 
@@ -443,24 +444,12 @@ public class StyleKit: NSObject {
 
 
         //// Rectangle 4 Drawing
-        context.saveGState()
-        context.setBlendMode(.sourceIn)
-        context.beginTransparencyLayer(auxiliaryInfo: nil)
-
-        let rectangle4Path = UIBezierPath(rect: CGRect(x: -9, y: -7, width: (checkRevealWidth + 1), height: 16))
-        palette.deviceColor.setFill()
-        rectangle4Path.fill()
-
-        context.endTransparencyLayer()
-        context.restoreGState()
-
 
         context.endTransparencyLayer()
 
         context.restoreGState()
 
         context.restoreGState()
-
     }
 
     public static func drawReadyToDownloadState(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 50, height: 50), resizing: ResizingBehavior = .aspectFit, palette: Palette, readyToDownloadManipulable: CGFloat = 0) {
@@ -512,20 +501,6 @@ public class StyleKit: NSObject {
         downloadTackPath.stroke()
 
         context.restoreGState()
-
-
-        // Square Drawing
-        context.saveGState()
-        context.translateBy(x: 25, y: 25)
-
-        let squarePath = UIBezierPath(rect: CGRect(x: -3.75, y: -3.75, width: 7.5, height: 7.5))
-        palette.downloadColor.setFill()
-        squarePath.fill()
-
-        context.restoreGState()
-
-        context.restoreGState()
-
     }
 
     public static func drawDashMoveState(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 50, height: 50), resizing: ResizingBehavior = .aspectFit, palette: Palette, dashMoveManipulable: CGFloat = 0) {
@@ -581,20 +556,6 @@ public class StyleKit: NSObject {
         context.restoreGState()
 
         context.restoreGState()
-
-
-        // Square Drawing
-        context.saveGState()
-        context.translateBy(x: 25, y: 25)
-
-        let squarePath = UIBezierPath(rect: CGRect(x: -3.75, y: -3.75, width: 7.5, height: 7.5))
-        palette.downloadColor.setFill()
-        squarePath.fill()
-
-        context.restoreGState()
-
-        context.restoreGState()
-
     }
 
     public static func drawAppleTVCanvas(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 226, height: 162), resizing: ResizingBehavior = .aspectFit, palette: Palette) {
