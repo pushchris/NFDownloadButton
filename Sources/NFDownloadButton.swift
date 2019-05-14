@@ -343,8 +343,6 @@ public class StyleKit: NSObject {
 
 
         //// Variable Declarations
-        let checkRevealWidth: CGFloat = checkRevealManipulable * 17
-
         switch style {
 
         case .iOS:

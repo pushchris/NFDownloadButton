@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
  s.name = 'NFDownloadButton'
- s.version = '0.0.6'
+ s.version = '0.0.7'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'Revamped Download Button'
  s.homepage = 'https://github.com/LeonardoCardoso/NFDownloadButton'
@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
  s.authors = { "Leonardo Cardoso" => "contact@leocardz.com" }
  s.source = { :git => "https://github.com/LeonardoCardoso/NFDownloadButton.git", :tag => s.version.to_s }
  s.platforms     = { :ios => "8.0" }
+ s.swift_version = '5.0'
  s.requires_arc = true
  s.source_files  = "Sources/**/*.swift"
  s.framework  = "Foundation"
